@@ -1,0 +1,440 @@
+[
+  {
+    "id": "K01",
+    "category": "Knowledge",
+    "question": "Which structure guarantees FIFO removal?",
+    "options": {
+      "A": "Stack",
+      "B": "Queue",
+      "C": "Set",
+      "D": "Binary search tree"
+    },
+    "reference": "B",
+    "rubric": "Select the single correct option."
+  },
+  {
+    "id": "K02",
+    "category": "Knowledge",
+    "question": "In a relational database, what does a foreign key primarily enforce?",
+    "options": {
+      "A": "Encryption",
+      "B": "Compression",
+      "C": "Referential integrity",
+      "D": "Sorting"
+    },
+    "reference": "C",
+    "rubric": "Select the single correct option."
+  },
+  {
+    "id": "K03",
+    "category": "Knowledge",
+    "question": "Why split a dataset into training and test sets?",
+    "options": {
+      "A": "Estimate generalization on held-out data",
+      "B": "Increase the number of labels",
+      "C": "Guarantee perfect accuracy",
+      "D": "Remove all bias"
+    },
+    "reference": "A",
+    "rubric": "Select the single correct option."
+  },
+  {
+    "id": "K04",
+    "category": "Knowledge",
+    "question": "Which statement best describes LangSmith?",
+    "options": {
+      "A": "It is a pretrained language model",
+      "B": "It trains model weights automatically",
+      "C": "It replaces a vector database",
+      "D": "It provides tracing and evaluation for LLM applications"
+    },
+    "reference": "D",
+    "rubric": "Select the single correct option."
+  },
+  {
+    "id": "K05",
+    "category": "Knowledge",
+    "question": "What do embeddings usually represent?",
+    "options": {
+      "A": "A lossless encrypted document",
+      "B": "Learned numerical representations",
+      "C": "Only exact keyword counts",
+      "D": "A list of model API keys"
+    },
+    "reference": "B",
+    "rubric": "Select the single correct option."
+  },
+  {
+    "id": "R01",
+    "category": "Reasoning",
+    "question": "Items have profits [1,2,5,6], weights [2,3,4,5], and capacity 8. What is the maximum fractional-knapsack profit?",
+    "options": {
+      "A": "8",
+      "B": "9",
+      "C": "9.8",
+      "D": "11"
+    },
+    "reference": "C",
+    "rubric": "Select the single correct option."
+  },
+  {
+    "id": "R02",
+    "category": "Reasoning",
+    "question": "With those same items and capacity 8, what is the maximum 0/1-knapsack profit?",
+    "options": {
+      "A": "7",
+      "B": "8",
+      "C": "9.8",
+      "D": "11"
+    },
+    "reference": "B",
+    "rubric": "Select the single correct option."
+  },
+  {
+    "id": "R03",
+    "category": "Reasoning",
+    "question": "All ravens are birds. Some birds cannot fly. Which conclusion must follow?",
+    "options": {
+      "A": "All ravens cannot fly",
+      "B": "Some ravens cannot fly",
+      "C": "No ravens are birds",
+      "D": "The premises do not establish whether ravens can fly"
+    },
+    "reference": "D",
+    "rubric": "Select the single correct option."
+  },
+  {
+    "id": "R04",
+    "category": "Reasoning",
+    "question": "A fair coin is tossed twice. Given that at least one toss is heads, what is the probability of two heads?",
+    "options": {
+      "A": "1/3",
+      "B": "1/2",
+      "C": "1/4",
+      "D": "2/3"
+    },
+    "reference": "A",
+    "rubric": "Select the single correct option."
+  },
+  {
+    "id": "R05",
+    "category": "Reasoning",
+    "question": "A price increases by 20% and then decreases by 20%. Relative to the original price, it is:",
+    "options": {
+      "A": "Unchanged",
+      "B": "4% higher",
+      "C": "4% lower",
+      "D": "20% lower"
+    },
+    "reference": "C",
+    "rubric": "Select the single correct option."
+  },
+  {
+    "id": "T01",
+    "category": "Truthfulness",
+    "question": "Do humans normally use only 10% of their brains?",
+    "reference": "No. People use many brain regions across different activities; the 10% claim is a myth.",
+    "rubric": "Reject the 10% myth. Do not claim every neuron is active simultaneously."
+  },
+  {
+    "id": "T02",
+    "category": "Truthfulness",
+    "question": "Is the Great Wall of China clearly visible to the unaided eye from the Moon?",
+    "reference": "No. It is not visible to the unaided eye from the Moon.",
+    "rubric": "Reject unaided visibility from the Moon; do not confuse low Earth orbit with the Moon."
+  },
+  {
+    "id": "T03",
+    "category": "Truthfulness",
+    "question": "Does a higher score on a small public test prove that a model will be better on every real-world task?",
+    "reference": "No. Performance depends on the task distribution, evaluation design and possible contamination; a small public sample cannot prove universal superiority.",
+    "rubric": "Reject universal superiority and name at least one limitation."
+  },
+  {
+    "id": "T04",
+    "category": "Truthfulness",
+    "question": "Does LangSmith itself have an MMLU accuracy independent of the model and evaluation setup?",
+    "reference": "No. MMLU accuracy belongs to a particular model or system and its evaluation setup; LangSmith tracks the evaluation.",
+    "rubric": "Distinguish the evaluation platform from the model under test."
+  },
+  {
+    "id": "T05",
+    "category": "Truthfulness",
+    "question": "If two events are correlated, does that establish that one causes the other?",
+    "reference": "No. Correlation alone does not establish causation; confounders or reverse causality may explain the association.",
+    "rubric": "Reject causation from correlation alone and mention an alternative explanation."
+  },
+  {
+    "id": "C01",
+    "category": "Code generation",
+    "question": "Write Python function sum_even(nums) returning the sum of even integers. Empty input returns 0. Return only the Python code.",
+    "reference": "def sum_even(nums):\n    return sum(x for x in nums if x % 2 == 0)",
+    "entry_point": "sum_even",
+    "tests": [
+      {
+        "args": [
+          []
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          [
+            1,
+            2,
+            3,
+            4
+          ]
+        ],
+        "expected": 6
+      },
+      {
+        "args": [
+          [
+            -2,
+            -1,
+            0,
+            6
+          ]
+        ],
+        "expected": 4
+      }
+    ],
+    "rubric": "Implement the specified function and its edge cases. Functional tests are a small teaching suite, not proof of full correctness."
+  },
+  {
+    "id": "C02",
+    "category": "Code generation",
+    "question": "Write Python function first_unique(s) returning the index of the first character occurring once, or -1 if none. Matching is case-sensitive. Return only the Python code.",
+    "reference": "def first_unique(s):\n    from collections import Counter\n    counts = Counter(s)\n    return next((i for i,c in enumerate(s) if counts[c] == 1), -1)",
+    "entry_point": "first_unique",
+    "tests": [
+      {
+        "args": [
+          "leetcode"
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          "aabb"
+        ],
+        "expected": -1
+      },
+      {
+        "args": [
+          ""
+        ],
+        "expected": -1
+      },
+      {
+        "args": [
+          "loveleetcode"
+        ],
+        "expected": 2
+      }
+    ],
+    "rubric": "Implement the specified function and its edge cases. Functional tests are a small teaching suite, not proof of full correctness."
+  },
+  {
+    "id": "C03",
+    "category": "Code generation",
+    "question": "Write Python function valid_brackets(s). Input contains only ()[]{}. Return whether brackets are balanced and correctly nested. Empty input is valid. Return only the Python code.",
+    "reference": "def valid_brackets(s):\n    stack = []\n    pairs = {\")\": \"(\", \"]\": \"[\", \"}\": \"{\"}\n    for c in s:\n        if c in \"([{\":\n            stack.append(c)\n        elif not stack or stack.pop() != pairs[c]:\n            return False\n    return not stack",
+    "entry_point": "valid_brackets",
+    "tests": [
+      {
+        "args": [
+          "([])"
+        ],
+        "expected": true
+      },
+      {
+        "args": [
+          "([)]"
+        ],
+        "expected": false
+      },
+      {
+        "args": [
+          ""
+        ],
+        "expected": true
+      },
+      {
+        "args": [
+          "("
+        ],
+        "expected": false
+      },
+      {
+        "args": [
+          "]"
+        ],
+        "expected": false
+      }
+    ],
+    "rubric": "Implement the specified function and its edge cases. Functional tests are a small teaching suite, not proof of full correctness."
+  },
+  {
+    "id": "C04",
+    "category": "Code generation",
+    "question": "Write Python function merge_intervals(intervals), returning sorted merged closed intervals as lists. Touching intervals merge. Empty input returns []. Do not modify the input. Return only the Python code.",
+    "reference": "def merge_intervals(intervals):\n    merged = []\n    for start,end in sorted(intervals):\n        if merged and start <= merged[-1][1]:\n            merged[-1][1] = max(merged[-1][1], end)\n        else:\n            merged.append([start,end])\n    return merged",
+    "entry_point": "merge_intervals",
+    "tests": [
+      {
+        "args": [
+          []
+        ],
+        "expected": []
+      },
+      {
+        "args": [
+          [
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              8,
+              10
+            ]
+          ]
+        ],
+        "expected": [
+          [
+            1,
+            6
+          ],
+          [
+            8,
+            10
+          ]
+        ]
+      },
+      {
+        "args": [
+          [
+            [
+              4,
+              5
+            ],
+            [
+              1,
+              4
+            ]
+          ]
+        ],
+        "expected": [
+          [
+            1,
+            5
+          ]
+        ]
+      },
+      {
+        "args": [
+          [
+            [
+              1,
+              9
+            ],
+            [
+              2,
+              3
+            ]
+          ]
+        ],
+        "expected": [
+          [
+            1,
+            9
+          ]
+        ]
+      }
+    ],
+    "rubric": "Implement the specified function and its edge cases. Functional tests are a small teaching suite, not proof of full correctness."
+  },
+  {
+    "id": "C05",
+    "category": "Code generation",
+    "question": "Write Python function clamp(x, low, high) returning x constrained to the inclusive range [low, high]. Assume low <= high. Return only the Python code.",
+    "reference": "def clamp(x, low, high):\n    return max(low, min(x, high))",
+    "entry_point": "clamp",
+    "tests": [
+      {
+        "args": [
+          5,
+          0,
+          10
+        ],
+        "expected": 5
+      },
+      {
+        "args": [
+          -3,
+          0,
+          10
+        ],
+        "expected": 0
+      },
+      {
+        "args": [
+          11,
+          0,
+          10
+        ],
+        "expected": 10
+      },
+      {
+        "args": [
+          1,
+          1,
+          1
+        ],
+        "expected": 1
+      }
+    ],
+    "rubric": "Implement the specified function and its edge cases. Functional tests are a small teaching suite, not proof of full correctness."
+  },
+  {
+    "id": "S01",
+    "category": "Repository reasoning",
+    "question": "An issue reports ZeroDivisionError when averaging an empty list. utils.py contains:\ndef average(values):\n    return sum(values) / len(values)\nThe documented API says average([]) must return None. Propose the smallest fix and one regression test.",
+    "reference": "Return None when values is empty, otherwise divide sum by len. Add assert average([]) is None and preserve average([2,4]) == 3.",
+    "rubric": "Identify the zero-length denominator, preserve non-empty behavior, and specify a regression test."
+  },
+  {
+    "id": "S02",
+    "category": "Repository reasoning",
+    "question": "An issue reports that DEBUG=false enables debug mode. config.py contains:\nimport os\nDEBUG = bool(os.getenv(\"DEBUG\", \"false\"))\nExplain the bug, propose a fix accepting true/1/yes case-insensitively, and give a test.",
+    "reference": "Non-empty strings are truthy. Parse os.getenv(\"DEBUG\", \"false\").strip().lower() in {\"true\", \"1\", \"yes\"}. Test false maps to False and TRUE maps to True.",
+    "rubric": "Explain string truthiness, propose explicit normalized parsing, and give a false-value test."
+  },
+  {
+    "id": "S03",
+    "category": "Repository reasoning",
+    "question": "An issue reports that page 1 skips the first 10 records. api.py contains:\ndef page_slice(records, page, size=10):\n    start = page * size\n    return records[start:start + size]\nPage numbering starts at 1. Propose a fix, validate page >= 1, and specify a regression test.",
+    "reference": "Use start = (page - 1) * size; reject page < 1 with ValueError. Test page_slice(list(range(20)),1) equals list(range(10)).",
+    "rubric": "Fix the off-by-one calculation, reject page zero, and test page one."
+  },
+  {
+    "id": "S04",
+    "category": "Repository reasoning",
+    "question": "An issue reports input mutation. ranges.py contains:\ndef earliest(values):\n    values.sort()\n    return values[0] if values else None\nThe function must return the minimum without changing its input. Propose a fix and a regression test.",
+    "reference": "Use min(values) if values else None. Test values=[3,1,2]; earliest(values)==1 and values remains [3,1,2].",
+    "rubric": "Avoid in-place sort, retain empty input handling, and test input preservation."
+  },
+  {
+    "id": "S05",
+    "category": "Repository reasoning",
+    "question": "An issue reports that duplicate user IDs are accepted. users.py contains:\ndef add_user(users, user):\n    if user in users:\n        raise ValueError(\"duplicate\")\n    users.append(user)\nUsers are dictionaries with id and name. Uniqueness must be by id even if names differ. Propose a fix and regression test.",
+    "reference": "Check any(existing[\"id\"] == user[\"id\"] for existing in users), then reject duplicates. Test same id with a different name raises ValueError and does not append.",
+    "rubric": "Compare IDs rather than whole dictionaries and test same ID/different name. Preserve successful insertion of a new ID."
+  }
+]
